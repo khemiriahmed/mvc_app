@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StaffController {
 
     @GetMapping("/staffnames")
-    public String getStaffName(){
+    public String getStaffName(Model model){
         Staff myStaff = new Staff("Exemple","Developer",10000);
         model.addAttribute("staff",myStaff);
         return "staffnames";
