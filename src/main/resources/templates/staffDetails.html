@@ -31,10 +31,10 @@
         <th>Title</th>
         <th>Salary</th>
       </tr>
-      <tr th:object="${staff}">
-        <td th:text=*{staffName}></td>
-        <td th:text=*{staffTitle}>Maria Anders</td>
-        <td th:if="*{staffSalary > 500}">okk</td>
+      <tr th:each="oneStaff: ${allStaff}">
+        <td th:text="${oneStaff.staffName}"></td>
+        <td th:text="${oneStaff.staffTitle}"></td>
+        <td th:text="${oneStaff.staffSalary}"></td>
       </tr>
     </table>
   </body>
