@@ -10,7 +10,8 @@ public class Staff {
         this.staffTitle = staffTitle;
         this.staffSalary = staffSalary;
     }
-        public Staff() {
+
+    public Staff() {
     }
 
     public String getStaffName() {
@@ -36,9 +37,5 @@ public class Staff {
     public void setStaffSalary(double staffSalary) {
         this.staffSalary = staffSalary;
     }
-    
+
 }
-
-
-
- 
