@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All Staff</h2>
+
+    <table style="width: 100%">
+      <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Salary</th>
+      </tr>
+      <tr th:each="oneStaff: ${AllStaff}">
+        <td th:text="${oneStaff.staffName}"></td>
+        <td th:text="${oneStaff.staffTitle}"></td>
+        <td th:text="${oneStaff.staffSalary}"></td>
+      </tr>
+    </table>
+  </body>
+</html>
