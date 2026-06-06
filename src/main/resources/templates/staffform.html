@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form method='post' th:object="${Staff}">
+    <form method='post' th:object="${addNewStaff}" th:action="@{/dataSubmitForm}">
       <label for="StaffName">Staff Name:</label><br>
       <input type="text" placeholder="Staff Name" th:field="*{staffName}" /><br /><br />
 
