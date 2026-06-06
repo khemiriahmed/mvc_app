@@ -1,9 +1,19 @@
 package com.cwa.data;
 
+import java.util.UUID;
+
 public class Staff {
+    private String id;
     private String staffName;
     private String staffTitle;
     private double staffSalary;
+
+    public Staff(String id, String staffName, String staffTitle, double staffSalary) {
+        this.id = id;
+        this.staffName = staffName;
+        this.staffTitle = staffTitle;
+        this.staffSalary = staffSalary;
+    }
 
     public Staff(String staffName, String staffTitle, double staffSalary) {
         this.staffName = staffName;
@@ -12,6 +22,15 @@ public class Staff {
     }
 
     public Staff() {
+        this.id = UUID.randomUUID().toString();
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getStaffName() {
