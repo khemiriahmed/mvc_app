@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method='post' th:object="${Staff}">
+      <label for="StaffName">Staff Name:</label><br>
+      <input type="text" placeholder="Staff Name" th:field="*{staffName}" /><br /><br />
+
+      <label for="staffTitle">Staff Name:</label><br>
+      <input type="text" placeholder="Staff Title" th:field="*{staffTitle}" /><br /><br />
+
+       <label for="staffSalary">Staff Name:</label><br>
+      <input type="text" placeholder="Staff Salray" th:field="*{staffSalary}" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
